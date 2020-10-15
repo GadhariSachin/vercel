@@ -14,7 +14,9 @@ function TodoFormInput(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (todoTask.length < 1) {
+      return false;
+    }
     props.onSubmit({
       id: Math.floor(Math.random() * 1000),
       text: todoTask,
@@ -58,6 +60,7 @@ function TodoFormInput(props) {
           size="large"
           startIcon={<SaveIcon />}
           style={buttonCustomStyle}
+          onClick={handleSubmit}
         >
           Add
         </Button>
