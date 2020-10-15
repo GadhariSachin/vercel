@@ -1,0 +1,33 @@
+h2 {
+  margin: 0px 0px 5px;
+}
+h4 {
+  margin: 0;
+}
+.todo_taskbar {
+  display: flex;
+  justify-content: space-between;
+}
+.todo_taskbar_left {
+  float: left;
+  text-align: initial;
+}
+.todo_taskbar_right {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.todo_taskbar_right .active {
+  border-bottom: 1px solid white !important;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.todo_taskbar_right button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
