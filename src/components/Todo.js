@@ -12,16 +12,15 @@ function Todo() {
   const [activeTab, setActiveTabState] = useState("all");
 
   const addTodo = (todo) => {
-    console.log(todo);
     if (!todo.text || /^\s*$/.test(todo)) {
-      alert("Empty string is not accpetable");
+      return false;
+    } else {
+      const newTodo = [todo, ...todos];
+
+      setTodosState(newTodo);
+      setFilterTodosState(newTodo);
+      setactiveTasksState(newTodo);
     }
-
-    const newTodo = [todo, ...todos];
-
-    setTodosState(newTodo);
-    setFilterTodosState(newTodo);
-    setactiveTasksState(newTodo);
   };
 
   const markTaskAsCompleted = (todoId) => {
